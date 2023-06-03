@@ -1,0 +1,26 @@
+.btn-group {
+    clear: both !important;
+}
+
+.btn-group, .btn-group-vertical {
+    position: relative !important;
+    display: -webkit-inline-box !important;
+    display: -ms-inline-flexbox !important;
+    display: inline-flex !important;
+    vertical-align: middle !important;
+}
+
+
+/*.fixed .content-wrapper, .fixed .right-side {
+    padding-top: 0px !important;*/
+    /* z-index: 998; */
+    /* position: absolute;
+    top: 50px !important; */
+/*} */
+
+
+.fixed .content-wrapper, .fixed .right-side {
+    /* padding-top: 0px !important; */
+    /* position: absolute;
+    top: 50px !important; */
+}

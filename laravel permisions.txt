@@ -1,0 +1,23 @@
+#Kwenye Ubuntu
+sudo chown -R $USER:www-data /var/www/html/faveo-helpdesk
+sudo find /var/www/html/faveo-helpdesk -type f -exec chmod 644 {} \;
+sudo find /var/www/html/faveo-helpdesk -type d -exec chmod 755 {} \;
+sudo chgrp -R www-data /var/www/html/faveo-helpdesk/storage /var/www/html/faveo-helpdesk/bootstrap/cache /var/www/html/faveo-helpdesk/public
+sudo chmod -R ug+rwx /var/www/html/faveo-helpdesk/storage /var/www/html/faveo-helpdesk/bootstrap/cache /var/www/html/faveo-helpdesk/public
+
+sudo chown -R apache:apache /var/www/html/helpdesk_testing
+sudo find /var/www/html/helpdesk_testing -type f -exec chmod 644 {} \;
+sudo find /var/www/html/helpdesk_testing -type d -exec chmod 755 {} \;
+sudo chgrp -R apache /var/www/html/helpdesk_testing/storage /var/www/html/helpdesk_testing/bootstrap/cache /var/www/html/helpdesk_testing/public
+sudo chmod -R ug+rwx /var/www/html/helpdesk_testing/storage /var/www/html/helpdesk_testing/bootstrap/cache /var/www/html/helpdesk_testing/public
+
+sudo chown -R apache:apache /var/www/html/helpdesk
+sudo find /var/www/html/helpdesk -type f -exec chmod 644 {} \;
+sudo find /var/www/html/helpdesk -type d -exec chmod 755 {} \;
+sudo chgrp -R apache /var/www/html/helpdesk/storage /var/www/html/helpdesk/bootstrap/cache /var/www/html/helpdesk/public
+sudo chmod -R ug+rwx /var/www/html/helpdesk/storage /var/www/html/helpdesk/bootstrap/cache /var/www/html/helpdesk/public
+
+php artisan cache:clear
+php artisan config:clear
+php artisan config:cache
+php artisan optimize:clear

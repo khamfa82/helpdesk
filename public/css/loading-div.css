@@ -1,0 +1,70 @@
+  .has-error2 {
+    border: 1px solid red !important;
+    /* color: red !important; */
+  }
+
+  .simple-report-number {
+    background: rgb(5,139,97, 0.6);
+    padding: 5px;
+    padding-top: 12px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+  
+  .loader {
+    width: 100% !important;
+    margin: auto;
+    text-align: center;
+    background: #3c8dbc;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .loader-wheel {
+    animation: spin 1s infinite linear;
+    border: 2px solid rgba(30, 30, 30, 0.5);
+    border-left: 4px solid #fff;
+    border-radius: 50%;
+    height: 50px;
+    margin: auto;
+    margin-bottom: 20px;
+    width: 50px;
+  }
+  
+  .loader-text {
+    color: #fff;
+    font-family: arial, sans-serif;
+  }
+  
+  .loader-text:after {
+    content: 'Loading';
+    animation: load 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes load {
+    0% {
+      content: 'Loading';
+    }
+    33% {
+      content: 'Loading.';
+    }
+    67% {
+      content: 'Loading..';
+    }
+    100% {
+      content: 'Loading...';
+    }
+  }
